@@ -1,8 +1,6 @@
 FROM ubuntu:14.04
 
-ENV INFLUXDB_VERSION 0.10.3-1
-
-#difine non interactive mode 
+#difine non interactive mode
 ENV DEBIAN_FRONTEND noninteractive
 
 ENV	INFLUXDB_URL http://localhost:8086
@@ -16,10 +14,10 @@ ENV CONFIG_FILE="/etc/influxdb/influxdb.conf"
 ENV API_URL="http://localhost:8086"
 
 #Keep Package List Updated & software upgraded
-RUN apt-get -y update 
+RUN apt-get -y update
 RUN apt-get -y upgrade
 
-#Install VIM , in case you need to change any config inside docker.  
+#Install VIM , in case you need to change any config inside docker.
 FROM  confluent/postgres-bw:0.1
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "vim"]
@@ -47,7 +45,7 @@ RUN wget -q https://s3.amazonaws.com/influxdb/influxdb_$INFLUXDB_VERSION-1_amd64
     rm -f influxdb_$INFLUXDB_VERSION-1_amd64.deb*
 
 #Exposing port influxdb
-EXPOSE 8083 8086 8088 8091 
+EXPOSE 8083 8086 8088 8091
 #jmeter
 EXPOSE 2003
 
