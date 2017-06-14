@@ -28,4 +28,6 @@ InfluxDB admin -> http://localhost:8083/
 influxDB access localhost:8086
 
 influxdb jmeter access localhost:2003
- for testing
+ 
+ 
+ use for testing
