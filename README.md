@@ -31,3 +31,7 @@ influxdb jmeter access localhost:2003
  
  
  use for testing
+
+# Note 
+
+This is old implementation with traditional docker
